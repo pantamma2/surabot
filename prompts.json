@@ -1,0 +1,29 @@
+{
+  "prompts": [
+    {
+      "tag": "greetings",
+      "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey", "greetings", "good morning", "Yo"],
+      "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?", "Good day, what can I help you with?", "Hello, this is the Bangalore AI Chatbot, One Stop Shop for your fooding needs!"],
+      "context_set": ""
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Thank you", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "bye", "ciao", "see ya"],
+      "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!", "Adios!", "Ciao!", "Good day!"],
+      "context_set": ""
+    },
+    {
+      "tag": "cuisines",
+      "patterns": ["I'm in the mood for Italian food","I'm looking for a Chinese restaurant","Can you recommend a good Indian restaurant?", "I want to try some Thai food"],
+      "responses": ["Here are some restaurants in Koramangala","Here you go, some of the best restaurants of your cuisine"],
+      "context_set": ""
+    },
+    {
+      "tag": "recommendations",
+      "patterns": ["Restaurants in Bangalore","Where can I find a good restaurant in Bangalore?", "Best place to eat in Bangalore?", "I'm really hungry, suggest me places to eat in Bangalore"],
+      "responses": ["You could find some good restaurants in Bangalore, here are some"],
+      "context_set": ""
+    }
+    
+  ]
+}
