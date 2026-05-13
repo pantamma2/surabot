@@ -13,10 +13,10 @@ nltk.download('wordnet')
 lemmatizer = WordNetLemmatizer()
 
 
-prompts = json.loads(open('prompts.json').read())
+prompts = json.loads(open('surabot-master/surabot-master/prompts.json').read())
 
 
-df = pd.read_csv('zomato.csv')
+df = pd.read_csv('surabot-master/surabot-master/zomato.csv')
 
 
 restaurants = df[['name', 'cuisines', 'location']].dropna()
@@ -40,8 +40,8 @@ words = sorted(set(words))
 
 classes = sorted(set(classes))
 
-pickle.dump(words, open('words.pkl', 'wb'))
-pickle.dump(classes, open('classes.pkl', 'wb'))
+pickle.dump(words, open('surabot-master/surabot-master/words.pkl', 'wb'))
+pickle.dump(classes, open('surabot-master/surabot-master/classes.pkl', 'wb'))
 
 training = []
 outputEmpty = [0] * len(classes)
@@ -73,6 +73,6 @@ model.add(tf.keras.layers.Dense(len(trainY[0]), activation='softmax'))
 sgd = tf.keras.optimizers.SGD(learning_rate=0.01, momentum=0.9, nesterov=True)
 model.compile(loss='categorical_crossentropy', optimizer=sgd, metrics=['accuracy'])
 
-model.fit(trainX, trainY, epochs=200, batch_size=5, verbose=1)
-model.save('chatbotmock1.h5')
+model.fit(trainX, trainY, epochs=300, batch_size=5, verbose=1)
+model.save('surabot-master/surabot-master/chatbotmock1.keras')
 print('Model Debugged!')
