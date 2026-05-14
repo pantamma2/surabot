@@ -9,7 +9,7 @@ import nltk
 import os
 from nltk.stem import WordNetLemmatizer
 
-app = Flask(__name__)  # Fixed: removed trailing comma
+app = Flask(__name__)  
 
 nltk.download('punkt', quiet=True)
 nltk.download('wordnet', quiet=True)
@@ -132,7 +132,7 @@ def get_response(intents, prompts, restaurants, context):
 
 @app.route('/')
 def index():
-    return render_template('index.html')  # Fixed: proper template path
+    return render_template('index.html')  
 
 @app.route('/send_message', methods=['POST'])
 def send_message():
@@ -141,7 +141,7 @@ def send_message():
         return jsonify("Please send a message!"), 400
 
     message = data['message']
-    context_data['last_message'] = message  # Store for cuisine detection
+    context_data['last_message'] = message  
 
     intents = predict(message)
     response = get_response(intents, prompts_data, restaurants_data, context_data)
