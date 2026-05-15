@@ -1,4 +1,4 @@
-#  Surabot — Bangalore Restaurant Chatbot
+#  Surabot -> Bangalore Restaurant Chatbot
 
 A conversational chatbot that helps users discover restaurants in Bangalore based on cuisine preferences and location.
 
